@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
 from scipy.interpolate import interp1d
+import os  # Ortam değişkenlerini okumak için
 
 app = Flask(__name__)
 
@@ -96,4 +97,6 @@ def index():
     return render_template("index.html")
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    # Render için uygun port ayarı
+    port = int(os.environ.get("PORT", 5000))  # Render'dan gelen PORT'u al, yoksa 5000'i kullan
+    app.run(host="0.0.0.0", port=port, debug=False)
