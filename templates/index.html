@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vagon Hacim Hesaplama</title>
-    <!-- CSS dosyasını Flask'in url_for ile yükleme -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -22,13 +21,14 @@
             
             <button type="submit" id="calculate-button">Hesapla</button>
         </form>
+
+        <!-- Sonuçların Gösterileceği Bölüm -->
         <div id="result" class="hidden">
             <h2>Sonuç:</h2>
             <p>Hesaplanan Hacim: <span id="volume"></span> dm³</p>
             <p>Sonuç (cm): <span id="result-cm"></span></p>
         </div>
     </div>
-    <!-- JavaScript dosyasını Flask'in url_for ile yükleme -->
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
