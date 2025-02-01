@@ -4,21 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vagon Hacim Hesaplama</title>
+    <!-- CSS dosyasını Flask'in url_for ile yükle -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="container">
         <h1>Vagon Hacim Hesaplama</h1>
+        
+        <!-- Form -->
         <form id="calculation-form">
+            <!-- Vagon Tipi -->
             <label for="tip">Vagon Tipi:</label>
-            <input type="text" id="tip" name="tip" placeholder="örn. '106' veya 'tip106'" required>
+            <input 
+                type="text" 
+                id="tip" 
+                name="tip" 
+                placeholder="örn. '106' veya 'tip106'" 
+                required
+            >
             
+            <!-- Ağırlık -->
             <label for="weight">Yükün Ağırlığı (kg):</label>
-            <input type="number" step="any" id="weight" name="weight" placeholder="örn. '5000'" required>
+            <input 
+                type="number" 
+                step="any" 
+                id="weight" 
+                name="weight" 
+                placeholder="örn. '5000'" 
+                required
+            >
             
+            <!-- Yoğunluk -->
             <label for="density">Malzemenin Yoğunluğu (kg/dm³):</label>
-            <input type="number" step="any" id="density" name="density" placeholder="örn. '2.5'" required>
+            <input 
+                type="number" 
+                step="any" 
+                id="density" 
+                name="density" 
+                placeholder="örn. '2.5'" 
+                required
+            >
             
+            <!-- Hesapla Butonu -->
             <button type="submit" id="calculate-button">Hesapla</button>
         </form>
 
@@ -29,6 +56,8 @@
             <p>Sonuç (cm): <span id="result-cm"></span></p>
         </div>
     </div>
+
+    <!-- JavaScript dosyasını Flask'in url_for ile yükle -->
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
