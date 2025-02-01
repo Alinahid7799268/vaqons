@@ -56,14 +56,14 @@ button:hover {
     background-color: #4C566A;
 }
 
-/* Sonuçlar için Stil */
-#result {
-    margin-top: 20px;
-    display: none; /* Başlangıçta gizli */
-}
-
+/* Başlangıçta sonuçları gizle */
 .hidden {
     display: none;
+}
+
+/* Sonuçlar için stil */
+#result {
+    margin-top: 20px;
 }
 
 #result h2 {
