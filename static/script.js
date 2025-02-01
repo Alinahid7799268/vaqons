@@ -12,7 +12,7 @@ document.getElementById("calculation-form").addEventListener("submit", function 
         if (data.status === "success") {
             // Sonuçları HTML elementlerine yazdır
             document.getElementById("volume").textContent = data.volume;
-            document.getElementById("result-cm").textContent = data.result;
+            document.getElementById("result-cm").textContent = data.result; // Düzeltildi
 
             // Sonuçları göstermek için "hidden" sınıfını kaldır
             document.getElementById("result").classList.remove("hidden");
